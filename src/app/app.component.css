@@ -1,0 +1,82 @@
+.main {
+  background-color: rgba(25, 54, 216, 0.493);
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". persona ."
+    ". estudios ."
+    ". certificados ."
+    ". habilidades ."
+    ". . . ";
+
+  grid-template-columns: 10% 80% 10%;
+
+  grid-template-rows: 5vh auto auto auto auto 15vh;
+
+  grid-gap: 10px;
+
+  height: auto;
+
+  background: url(/assets/images/fondo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* ---------- Persona ---------- */
+
+.persona {
+  grid-area: persona;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.foto {
+  height: 100px;
+  width: 100px;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+.datosPersona {
+  height: 100px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- Estudios ---------- */
+
+.estudios {
+  grid-area: estudios;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.estudioSing {
+}
+
+/* ---------- Certificados ---------- */
+
+.certificados {
+  grid-area: certificados;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.certificadoSing {
+}
+
+/* ---------- Habilidades ---------- */
+
+.habilidades {
+  grid-area: habilidades;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.habilidadSing {
+}
+
+/* ---------- Componentes ---------- */

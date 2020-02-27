@@ -1,0 +1,60 @@
+<div class="main">
+
+  <mat-card class="persona">
+
+    <img class="foto" src="/assets/images/profile.png">
+
+    <div class="datosPersona">
+
+    </div>
+
+  </mat-card>
+
+  <mat-card class="estudios">
+
+    <h1>Estudios</h1>
+
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let estudio of estudios">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{estudio.nombre}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{estudio.centro}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{estudio.lugar}}</p>
+        <p>{{estudio.anoInicio}} - {{estudio.anoFin}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </mat-card>
+
+  <mat-card class="certificados">
+    <h1>Certificados</h1>
+
+    <mat-list>
+      <mat-list-item *ngFor="let certificado of certificados; let lastItem = last">
+        <p mat-line>{{certificado.nombre}}</p>
+        <p mat-line>{{certificado.empresa}}</p>
+        <p mat-line>{{certificado.fecha}}</p>
+        <mat-divider *ngIf="!lastItem"></mat-divider>
+      </mat-list-item>
+
+
+    </mat-list>
+
+  </mat-card>
+
+  <mat-card class="habilidades">
+
+    <h1>Habilidades</h1>
+
+    <mat-chip-list aria-label="Lista de habilidades">
+      <mat-chip color="primary" selected *ngFor="let habilidad of habilidades">{{habilidad}}</mat-chip>
+    </mat-chip-list>
+
+  </mat-card>
+
+</div>
