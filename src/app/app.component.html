@@ -6,6 +6,12 @@
 
     <div class="datosPersona">
 
+        <div><font color="blue">Nombre: </font>{{this.nombre}} {{apellido1}} {{apellido2}}</div>
+        <div><font color="blue">Teléfono: </font>{{telefono}}</div>
+        <div><font color="blue">Correo: </font>{{correo}}</div>
+        <div><font color="blue">Github: </font><a href={{github}}>{{github}}</a></div>
+
+
     </div>
 
   </mat-card>
@@ -54,6 +60,22 @@
     <mat-chip-list aria-label="Lista de habilidades">
       <mat-chip color="primary" selected *ngFor="let habilidad of habilidades">{{habilidad}}</mat-chip>
     </mat-chip-list>
+
+  </mat-card>
+
+  <mat-card class="github">
+
+    <h1>Github</h1>
+
+    <mat-list>
+      <mat-list-item *ngFor="let repo of repos; let lastItem = last"><a href={{repo.html_url}}>
+        <p mat-line>{{repo.name}}</p>
+        <p mat-line>{{repo.language}}</p>
+        <mat-divider *ngIf="!lastItem"></mat-divider>
+      </a></mat-list-item>
+
+
+    </mat-list>
 
   </mat-card>
 

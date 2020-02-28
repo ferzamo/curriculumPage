@@ -1,4 +1,6 @@
+import { GithubServiceService } from './services/github-service.service';
 import { Component } from "@angular/core";
+import {Repo} from './models/repo';
 
 @Component({
   selector: "app-root",
@@ -6,11 +8,31 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  nombre: string;
-  apellido1: string;
-  apellido2: string;
-  telefono: string;
-  correo: string
+
+  constructor(private githubService : GithubServiceService){}
+
+  repos: Repo[] = [];
+
+  ngOnInit():void{
+
+    this.githubService.getRepos(this.githubUser).subscribe(res =>{
+      this.repos = res;
+
+    }, error => {
+      console.log(error)
+    })
+
+
+  }
+
+  nombre: string = "Fernando";
+  apellido1: string = "Zamora";
+  apellido2: string = "Díez";
+  telefono: string = "644368456";
+  correo: string = "fernandozd.contacto@gmail.com";
+  githubURL: string = "https://github.com/";
+  githubUser: string = "ferzamo"
+  github: string = this.githubURL + this.githubUser;
 
   estudios = [
     {

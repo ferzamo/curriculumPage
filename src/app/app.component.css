@@ -7,11 +7,12 @@
     ". estudios ."
     ". certificados ."
     ". habilidades ."
+    ". github ."
     ". . . ";
 
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 25% 50% 25%;
 
-  grid-template-rows: 5vh auto auto auto auto 15vh;
+  grid-template-rows: 5vh auto auto auto auto auto 15vh;
 
   grid-gap: 10px;
 
@@ -45,8 +46,16 @@
 
 .datosPersona {
   height: 100px;
-  width: 500px;
-  background-color: rgba(255, 255, 255, 0.9);
+  width: calc(auto + 50px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 15px;
+
+  font-weight: 500;
+
 }
 
 /* ---------- Estudios ---------- */
@@ -79,4 +88,18 @@
 .habilidadSing {
 }
 
+/* ---------- Github ---------- */
+
+.github{
+  grid-area: github;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 /* ---------- Componentes ---------- */
+
+a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.918);
+}
+
+
