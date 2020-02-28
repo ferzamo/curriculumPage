@@ -36,20 +36,29 @@ export class AppComponent {
 
   estudios = [
     {
-      nombre: "Ingeniería Informática",
+      nombre: "Grado en Ingeniería Informática",
       centro: "Universidad de Valladolid",
       lugar: "Valladolid",
       anoInicio: "2015",
       anoFin: "2020"
     },
     {
-      nombre: "Grado elemental de música",
+      nombre: "Grado Elemental de Música en la Especialidad de Piano",
       centro: "Centro de estudios musicales Modulando",
       lugar: "Valladolid",
-      anoInicio: "2013",
-      anoFin: "2015"
+      anoInicio: "2006",
+      anoFin: "2010"
     }
   ];
+
+  experiencias = [
+    {
+      nombre: "Becario en Minsait",
+      empresa: "Minsait",
+      anoInicio: "2020",
+      anoFin: "actualidad"
+    }
+  ]
 
   certificados = [
     {
@@ -72,6 +81,24 @@ export class AppComponent {
 
   habilidades = [
     "Java", "Python", "SQL", "JavaScript",
-    "Angular 2+",
+    "Angular 2+", "Android", "Herramientas UML", "Ensamblador"
   ];
+
+  idiomas = [
+    {
+      nombre: "Inglés",
+      nivel: "Avanzado",
+      historia: "Estuve mes en un campus de idiomas en Inglaterra y fui dos veranos a una familia de intercambio en Wisconsin"
+    },
+    {
+      nombre: "Francés",
+      nivel: "Básico",
+      historia: "Estuve de intercambio con una familia francesa en Château-Gontier durante 1 mes"
+    },
+    {
+      nombre: "Español",
+      nivel: "Nativo",
+      historia: "Nací en España"
+    }
+  ]
 }

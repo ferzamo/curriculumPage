@@ -2,14 +2,14 @@
 
   <mat-card class="persona">
 
-    <img class="foto" src="/assets/images/profile.png">
+    <img class="foto" src="/assets/images/profile.jpg">
 
     <div class="datosPersona">
 
-        <div><font color="blue">Nombre: </font>{{this.nombre}} {{apellido1}} {{apellido2}}</div>
-        <div><font color="blue">Teléfono: </font>{{telefono}}</div>
-        <div><font color="blue">Correo: </font>{{correo}}</div>
-        <div><font color="blue">Github: </font><a href={{github}}>{{github}}</a></div>
+        <div><font color="2c40b7">Nombre: </font>{{this.nombre}} {{apellido1}} {{apellido2}}</div>
+        <div><font color="2c40b7">Teléfono: </font>{{telefono}}</div>
+        <div><font color="2c40b7">Correo: </font>{{correo}}</div>
+        <div><font color="2c40b7">Github: </font><a href={{github}}>{{github}}</a></div>
 
 
     </div>
@@ -37,6 +37,24 @@
 
   </mat-card>
 
+  <mat-card class="experiencia">
+
+    <h1>Experiencia</h1>
+
+    <mat-list>
+      <mat-list-item *ngFor="let experiencia of experiencias; let lastItem = last">
+        <p mat-line>{{experiencia.nombre}}</p>
+        <p mat-line>{{experiencia.empresa}}</p>
+        <p mat-line>{{experiencia.anoInicio}} - {{experiencia.anoFin}}</p>
+        <mat-divider *ngIf="!lastItem"></mat-divider>
+      </mat-list-item>
+
+
+    </mat-list>
+
+
+  </mat-card>
+
   <mat-card class="certificados">
     <h1>Certificados</h1>
 
@@ -60,6 +78,25 @@
     <mat-chip-list aria-label="Lista de habilidades">
       <mat-chip color="primary" selected *ngFor="let habilidad of habilidades">{{habilidad}}</mat-chip>
     </mat-chip-list>
+
+  </mat-card>
+
+  <mat-card class="idiomas">
+
+    <h1>Idiomas</h1>
+
+    <mat-tab-group dynamicHeight>
+      <mat-tab *ngFor="let idioma of idiomas" label="{{idioma.nombre}}">
+        <div class="small-box mat-elevation-z4">
+          
+              <p >{{idioma.nivel}}</p><br>
+              <p >{{idioma.historia}}</p>
+           
+        </div>
+      </mat-tab>
+      
+    </mat-tab-group>
+
 
   </mat-card>
 

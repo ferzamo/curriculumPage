@@ -2,17 +2,18 @@
   background-color: rgba(25, 54, 216, 0.493);
   display: grid;
   grid-template-areas:
-    ". . ."
-    ". persona ."
-    ". estudios ."
-    ". certificados ."
-    ". habilidades ."
-    ". github ."
-    ". . . ";
+    ". . . . ."
+    ". . persona . ."
+    ". estudios estudios estudios ."
+    ". experiencia experiencia experiencia ."
+    ". certificados certificados certificados ."
+    ". habilidades idiomas idiomas ."
+    ". github github github ."
+    ". . . . . ";
 
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 25% 11% 28% 11% 25%;
 
-  grid-template-rows: 5vh auto auto auto auto auto 15vh;
+  grid-template-rows: 5vh auto auto auto auto auto auto 15vh;
 
   grid-gap: 10px;
 
@@ -40,19 +41,19 @@
 .foto {
   height: 100px;
   width: 100px;
-  border-style: solid;
   margin-right: 10px;
 }
 
 .datosPersona {
   height: 100px;
   width: calc(auto + 50px);
-
+  
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
   padding: 15px;
+  font-size: 17px;
 
   font-weight: 500;
 
@@ -65,8 +66,13 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.estudioSing {
+/* ---------- Experiencia ---------- */
+
+.experiencia{
+  grid-area: experiencia;
+  background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 /* ---------- Certificados ---------- */
 
@@ -75,8 +81,7 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.certificadoSing {
-}
+
 
 /* ---------- Habilidades ---------- */
 
@@ -85,8 +90,16 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.habilidadSing {
+/* ---------- Idiomas ---------- */
+
+.idiomas{
+  grid-area: idiomas;
+  background-color: rgba(255, 255, 255, 0.8);
 }
+
+
+
+
 
 /* ---------- Github ---------- */
 
@@ -101,5 +114,23 @@ a {
   text-decoration: none !important;
   color: rgba(0, 0, 0, 0.918);
 }
+
+
+.small-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  height: 100px;
+  width: auto;
+}
+
+
+
 
 
