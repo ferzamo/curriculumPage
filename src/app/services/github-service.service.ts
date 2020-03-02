@@ -14,10 +14,6 @@ export class GithubServiceService {
   constructor(private http:HttpClient) { }
 
   url : string = "https://api.github.com"
-  urlMock : string = "http://www.mocky.io/v2/5e58f7852f00003265962301"
-
-
-
 
   getRepos (user : string)  : Observable<Repo[]>{
 
@@ -28,6 +24,5 @@ export class GithubServiceService {
     .pipe(map(res => res));
 
   }
-
 
 }

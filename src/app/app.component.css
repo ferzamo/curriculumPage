@@ -1,19 +1,6 @@
 .main {
   background-color: rgba(25, 54, 216, 0.493);
   display: grid;
-  grid-template-areas:
-    ". . . . ."
-    ". . persona . ."
-    ". estudios estudios estudios ."
-    ". experiencia experiencia experiencia ."
-    ". certificados certificados certificados ."
-    ". habilidades idiomas idiomas ."
-    ". github github github ."
-    ". . . . . ";
-
-  grid-template-columns: 25% 11% 28% 11% 25%;
-
-  grid-template-rows: 5vh auto auto auto auto auto auto 15vh;
 
   grid-gap: 10px;
 
@@ -24,7 +11,87 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
 
+@media (min-width: 150px) {
+  .main {
+    grid-template-areas:
+
+      "persona"
+      "estudios"
+      "experiencia"
+      "certificados"
+      "habilidades"
+      "idiomas"
+      "github"
+            ;
+
+    grid-template-columns: 100%;
+
+    grid-template-rows:  auto auto auto auto auto auto auto;
+
+  }
+}
+
+@media (min-width: 600px) {
+  .main {
+    grid-template-areas:
+
+      ". . ."
+      ". persona ."
+      ". estudios ."
+      ". experiencia ."
+      ". certificados ."
+      ". habilidades ."
+      ". idiomas ."
+      ". github ."
+      ". . ."      ;
+
+    grid-template-columns: 10% 80% 10%;
+
+    grid-template-rows: 5vh auto auto auto auto auto auto auto 15vh;
+
+  }
+}
+
+@media (min-width: 1100px) {
+  .main {
+
+    grid-template-areas:
+      ". . . . ."
+      ". . persona . ."
+      ". estudios estudios estudios ."
+      ". experiencia experiencia experiencia ."
+      ". certificados certificados certificados ."
+      ". habilidades idiomas idiomas ."
+      ". github github github ."
+      ". . . . . ";
+
+    grid-template-columns: 15% 15% 40% 15% 15%;
+
+    grid-template-rows: 5vh auto auto auto auto auto auto 15vh;
+
+  }
+}
+
+@media (min-width: 1500px) {
+  .main {
+
+    grid-template-areas:
+      ". . . . ."
+      ". . persona . ."
+      ". estudios estudios estudios ."
+      ". experiencia experiencia experiencia ."
+      ". certificados certificados certificados ."
+      ". habilidades idiomas idiomas ."
+      ". github github github ."
+      ". . . . . ";
+
+    grid-template-columns: 25% 11% 28% 11% 25%;
+
+    grid-template-rows: 5vh auto auto auto auto auto auto 15vh;
+
+  }
 }
 
 /* ---------- Persona ---------- */
@@ -46,8 +113,8 @@
 
 .datosPersona {
   height: 100px;
-  width: calc(auto + 50px);
-  
+  width: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -56,7 +123,6 @@
   font-size: 17px;
 
   font-weight: 500;
-
 }
 
 /* ---------- Estudios ---------- */
@@ -68,11 +134,10 @@
 
 /* ---------- Experiencia ---------- */
 
-.experiencia{
+.experiencia {
   grid-area: experiencia;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
 
 /* ---------- Certificados ---------- */
 
@@ -80,8 +145,6 @@
   grid-area: certificados;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
-
 
 /* ---------- Habilidades ---------- */
 
@@ -92,21 +155,41 @@
 
 /* ---------- Idiomas ---------- */
 
-.idiomas{
+.idiomas {
   grid-area: idiomas;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-
-
-
-
 /* ---------- Github ---------- */
 
-.github{
+.github {
   grid-area: github;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+.cabeceraGithub{
+
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.cabeceraGithub img{
+  height: 40px;
+  width: 40px;
+}
+
+.cuerpoGithub{
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+
+}
+
+
 
 /* ---------- Componentes ---------- */
 
@@ -115,13 +198,12 @@ a {
   color: rgba(0, 0, 0, 0.918);
 }
 
-
 .small-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   margin: 16px;
   padding: 16px;
   border-radius: 8px;
@@ -130,7 +212,23 @@ a {
   width: auto;
 }
 
+.smallerBoxContainer{
+
+  align-items: center;
+  padding:5px;
+
+}
+
+.smaller-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 
-
-
+  padding: 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  height: 100px;
+  width: auto;
+}

@@ -2,14 +2,22 @@
 
   <mat-card class="persona">
 
-    <img class="foto" src="/assets/images/profile.jpg">
+    <img class="foto" src="/assets/images/profile.png">
 
     <div class="datosPersona">
 
-        <div><font color="2c40b7">Nombre: </font>{{this.nombre}} {{apellido1}} {{apellido2}}</div>
-        <div><font color="2c40b7">Teléfono: </font>{{telefono}}</div>
-        <div><font color="2c40b7">Correo: </font>{{correo}}</div>
-        <div><font color="2c40b7">Github: </font><a href={{github}}>{{github}}</a></div>
+      <div>
+        <font color="2c40b7">Nombre: </font>{{this.nombre}} {{apellido1}} {{apellido2}}
+      </div>
+      <div>
+        <font color="2c40b7">Teléfono: </font>{{telefono}}
+      </div>
+      <div>
+        <font color="2c40b7">Correo: </font>{{correo}}
+      </div>
+      <div>
+        <font color="2c40b7">Github: </font><a href={{github}}>{{github}}</a>
+      </div>
 
 
     </div>
@@ -88,13 +96,13 @@
     <mat-tab-group dynamicHeight>
       <mat-tab *ngFor="let idioma of idiomas" label="{{idioma.nombre}}">
         <div class="small-box mat-elevation-z4">
-          
-              <p >{{idioma.nivel}}</p><br>
-              <p >{{idioma.historia}}</p>
-           
+
+          <p>{{idioma.nivel}}</p><br>
+          <p>{{idioma.historia}}</p>
+
         </div>
       </mat-tab>
-      
+
     </mat-tab-group>
 
 
@@ -102,17 +110,29 @@
 
   <mat-card class="github">
 
-    <h1>Github</h1>
+    <div class="cabeceraGithub">
 
-    <mat-list>
-      <mat-list-item *ngFor="let repo of repos; let lastItem = last"><a href={{repo.html_url}}>
-        <p mat-line>{{repo.name}}</p>
-        <p mat-line>{{repo.language}}</p>
-        <mat-divider *ngIf="!lastItem"></mat-divider>
-      </a></mat-list-item>
+      <h1>Github</h1>
+      <img src="https://avatars1.githubusercontent.com/u/44323170?s=400&v=4" alt="">
 
+    </div>
 
-    </mat-list>
+    <div class="cuerpoGithub">
+
+      <div class="smallerBoxContainer" *ngFor="let repo of repos">
+        <a href={{repo.html_url}}><div class="smaller-box mat-elevation-z4">
+
+          <p mat-line>
+            <font color="2c40b7" size="3px"><b>{{repo.name}}</b></font>
+          </p>
+          <p mat-line>
+            <font size="2px"><i>{{repo.language}}</i></font>
+          </p>
+
+        </div></a>
+      </div>
+
+    </div>
 
   </mat-card>
 

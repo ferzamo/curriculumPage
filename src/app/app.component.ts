@@ -1,6 +1,7 @@
 import { GithubServiceService } from './services/github-service.service';
 import { Component } from "@angular/core";
 import {Repo} from './models/repo';
+//import colors from './../assets/jsons/colors.json';
 
 @Component({
   selector: "app-root",
@@ -12,6 +13,7 @@ export class AppComponent {
   constructor(private githubService : GithubServiceService){}
 
   repos: Repo[] = [];
+  public colorsList:{}
 
   ngOnInit():void{
 
@@ -81,7 +83,7 @@ export class AppComponent {
 
   habilidades = [
     "Java", "Python", "SQL", "JavaScript",
-    "Angular 2+", "Android", "Herramientas UML", "Ensamblador"
+    "Angular 2+", "Android", "UML", "Ensamblador"
   ];
 
   idiomas = [
