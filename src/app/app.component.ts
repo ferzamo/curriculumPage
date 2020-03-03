@@ -21,39 +21,39 @@ export class AppComponent {
 
     this.githubService.getRepos(this.githubUser).subscribe(res =>{
       this.repos = res;
+      this.parseaColors();
 
 
     }, error => {
       console.log(error)
     })
 
-    this.parseaColors();
+    
 
     /*this.repos[0] = {
       html_url: " ",
       name: "curriculum",
       language: "typescript",
-      color:"green"
+      color:""
     }
     this.repos[1] = {
       html_url: " ",
       name: "angularrr",
       language: "JavaScript",
-      color:"blue"
-    }*/
+      color: "aaa"
+    }
+
+    this.parseaColors();*/
 
   }
 
   parseaColors(){
 
       for (let i in colors){
+       
         for (let j=0; j<this.repos.length; j++){
-          if (i.toUpperCase() === this.repos[j].language.toUpperCase()){
-
-              this.repos[j].color= colors.i.color;
-              console.log(this.repos[j].color);
-              console.log(this.repos[j].language);
-
+          if (i.toUpperCase() === this.repos[j].language.toUpperCase()){ 
+              this.repos[j].color= colors[i].color;
           }
         }
       }

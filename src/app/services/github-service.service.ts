@@ -21,9 +21,6 @@ export class GithubServiceService {
 
   getRepos (user : string)  : Observable<Repo[]>{
 
-    this.http.get<any>(this.url + "/users/" + user + "/repos")
-    .subscribe(resp => console.log(resp));
-
     return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos")
     .pipe(map(res => res));
 
