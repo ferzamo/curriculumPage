@@ -126,7 +126,8 @@
             <font color="2c40b7" size="3px"><b>{{repo.name}}</b></font>
           </p>
           <p mat-line>
-            <font size="2px"><i>{{repo.language}}</i></font>
+            <span class="dot" [ngStyle]="{'background-color': repo.color}"></span>
+            <font size="2px"><i> {{repo.language}}</i></font>
           </p>
 
         </div></a>

@@ -1,7 +1,7 @@
 import { GithubServiceService } from './services/github-service.service';
 import { Component } from "@angular/core";
 import {Repo} from './models/repo';
-//import colors from './../assets/jsons/colors.json';
+import colors from './../assets/jsons/colors.json';
 
 @Component({
   selector: "app-root",
@@ -10,21 +10,53 @@ import {Repo} from './models/repo';
 })
 export class AppComponent {
 
+
+
   constructor(private githubService : GithubServiceService){}
 
   repos: Repo[] = [];
-  public colorsList:{}
+
 
   ngOnInit():void{
 
     this.githubService.getRepos(this.githubUser).subscribe(res =>{
       this.repos = res;
 
+
     }, error => {
       console.log(error)
     })
 
+    this.parseaColors();
 
+    /*this.repos[0] = {
+      html_url: " ",
+      name: "curriculum",
+      language: "typescript",
+      color:"green"
+    }
+    this.repos[1] = {
+      html_url: " ",
+      name: "angularrr",
+      language: "JavaScript",
+      color:"blue"
+    }*/
+
+  }
+
+  parseaColors(){
+
+      for (let i in colors){
+        for (let j=0; j<this.repos.length; j++){
+          if (i.toUpperCase() === this.repos[j].language.toUpperCase()){
+
+              this.repos[j].color= colors.i.color;
+              console.log(this.repos[j].color);
+              console.log(this.repos[j].language);
+
+          }
+        }
+      }
   }
 
   nombre: string = "Fernando";

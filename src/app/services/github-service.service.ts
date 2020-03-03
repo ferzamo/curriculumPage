@@ -15,6 +15,10 @@ export class GithubServiceService {
 
   url : string = "https://api.github.com"
 
+  private username = 'ferzamo';
+  private client_id ='042485680f05bd35872a';
+  private client_secret='949fb5cb8fbe18c788f275fbb396481a576238d9';
+
   getRepos (user : string)  : Observable<Repo[]>{
 
     this.http.get<any>(this.url + "/users/" + user + "/repos")
