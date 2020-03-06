@@ -1,6 +1,9 @@
 <div class="main">
 
-  <mat-card class="persona" >
+
+
+  <mat-card class="persona" data-aos="fade-down" data-aos-offset="0" data-aos-delay="0" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <img class="foto" src="/assets/images/profile.png">
 
@@ -24,7 +27,7 @@
 
   </mat-card>
 
-  <mat-card class="estudios" data-aos="fade-down" data-aos-offset="0" data-aos-delay="100" data-aos-duration="1000"
+  <mat-card class="estudios" data-aos="fade-down" data-aos-offset="0" data-aos-delay="300" data-aos-duration="1000"
   data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Estudios</h1>
@@ -46,13 +49,13 @@
 
   </mat-card>
 
-  <mat-card class="experiencia" data-aos="fade-down" data-aos-offset="-100" data-aos-delay="400" data-aos-duration="1000"
+  <mat-card class="experiencia" data-aos="fade-down" data-aos-offset="-100" data-aos-delay="600" data-aos-duration="1000"
   data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Experiencia</h1>
 
     <mat-list>
-      <mat-list-item *ngFor="let experiencia of experiencias; let lastItem = last">
+      <mat-list-item *ngFor="let experiencia of experiencias; let lastItem = last" class="hvr-shadow">
         <p mat-line>{{experiencia.nombre}}</p>
         <p mat-line>{{experiencia.empresa}}</p>
         <p mat-line>{{experiencia.anoInicio}} - {{experiencia.anoFin}}</p>
@@ -65,12 +68,12 @@
 
   </mat-card>
 
-  <mat-card class="certificados" data-aos="fade-down" data-aos-offset="-400" data-aos-delay="700" data-aos-duration="1000"
+  <mat-card class="certificados" data-aos="fade-down" data-aos-offset="-400" data-aos-delay="900" data-aos-duration="1000"
   data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
     <h1>Certificados</h1>
 
     <mat-list>
-      <mat-list-item *ngFor="let certificado of certificados; let lastItem = last">
+      <mat-list-item *ngFor="let certificado of certificados; let lastItem = last" class="hvr-shadow">
         <p mat-line>{{certificado.nombre}}</p>
         <p mat-line>{{certificado.empresa}}</p>
         <p mat-line>{{certificado.fecha}}</p>
@@ -82,7 +85,7 @@
 
   </mat-card>
 
-  <mat-card class="habilidades" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+  <mat-card class="habilidades" data-aos="fade-down" data-aos-offset="-2000" data-aos-delay="1200" data-aos-duration="1000"
     data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Habilidades</h1>
@@ -93,7 +96,7 @@
 
   </mat-card>
 
-  <mat-card class="idiomas" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+  <mat-card class="idiomas" data-aos="fade-down" data-aos-offset="-2000" data-aos-delay="1500" data-aos-duration="1000"
   data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Idiomas</h1>
@@ -113,7 +116,7 @@
 
   </mat-card>
 
-  <mat-card class="github" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+  <mat-card class="github" data-aos="fade-down" data-aos-offset="-2000" data-aos-delay="1800" data-aos-duration="1000"
   data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <div class="cabeceraGithub">
@@ -144,6 +147,7 @@
     </div>
 
   </mat-card>
+
 
 
 </div>

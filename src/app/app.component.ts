@@ -1,11 +1,7 @@
-import { GithubServiceService } from './services/github-service.service';
+import { GithubServiceService } from "./services/github-service.service";
 import { Component } from "@angular/core";
-import {Repo} from './models/repo';
-import colors from './../assets/jsons/colors.json';
-
-
-
-
+import { Repo } from "./models/repo";
+import colors from "./../assets/jsons/colors.json";
 
 @Component({
   selector: "app-root",
@@ -13,55 +9,53 @@ import colors from './../assets/jsons/colors.json';
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-
-
-
-  constructor(private githubService : GithubServiceService){}
+  constructor(private githubService: GithubServiceService) {}
 
   repos: Repo[] = [];
 
+  ngOnInit(): void {
 
-  ngOnInit():void{
+    //this.cargaGithub();
+    this.cargaGithubMock();
 
+  }
 
-    /*this.githubService.getRepos(this.githubUser).subscribe(res =>{
-      this.repos = res;
-      this.parseaColors();
+  cargaGithub() {
+    this.githubService.getRepos(this.githubUser).subscribe(
+      res => {
+        this.repos = res;
+        this.parseaColors();
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 
-
-    }, error => {
-      console.log(error)
-    })*/
-
-
-
+  cargaGithubMock() {
     this.repos[0] = {
       html_url: " ",
       name: "curriculum",
-      language: "typescript",
-      color:""
-    }
+      language: "Typescript",
+      color: ""
+    };
     this.repos[1] = {
       html_url: " ",
       name: "angularrr",
       language: "JavaScript",
       color: "aaa"
-    }
-
+    };
     this.parseaColors();
-
   }
 
-  parseaColors(){
-
-      for (let i in colors){
-
-        for (let j=0; j<this.repos.length; j++){
-          if (i.toUpperCase() === this.repos[j].language.toUpperCase()){
-              this.repos[j].color= colors[i].color;
-          }
+  parseaColors() {
+    for (let i in colors) {
+      for (let j = 0; j < this.repos.length; j++) {
+        if (i.toUpperCase() === this.repos[j].language.toUpperCase()) {
+          this.repos[j].color = colors[i].color;
         }
       }
+    }
   }
 
   nombre: string = "Fernando";
@@ -70,7 +64,7 @@ export class AppComponent {
   telefono: string = "644368456";
   correo: string = "fernandozd.contacto@gmail.com";
   githubURL: string = "https://github.com/";
-  githubUser: string = "ferzamo"
+  githubUser: string = "ferzamo";
   github: string = this.githubURL + this.githubUser;
 
   estudios = [
@@ -97,7 +91,7 @@ export class AppComponent {
       anoInicio: "2020",
       anoFin: "actualidad"
     }
-  ]
+  ];
 
   certificados = [
     {
@@ -115,29 +109,36 @@ export class AppComponent {
       empresa: "Centro de estudios Musicales Modulando",
       fecha: "2010"
     }
-
   ];
 
   habilidades = [
-    "Java", "Python", "SQL", "JavaScript",
-    "Angular 2+", "Android", "UML", "Ensamblador"
+    "Java",
+    "Python",
+    "SQL",
+    "JavaScript",
+    "Angular 2+",
+    "Android",
+    "UML",
+    "Ensamblador"
   ];
 
   idiomas = [
     {
       nombre: "Inglés",
       nivel: "Avanzado",
-      historia: "Estuve mes en un campus de idiomas en Inglaterra y fui dos veranos a una familia de intercambio en Wisconsin"
+      historia:
+        "Estuve un mes en un campus de idiomas en Inglaterra y fui dos veranos a una familia de intercambio en Wisconsin"
     },
     {
       nombre: "Francés",
       nivel: "Básico",
-      historia: "Estuve de intercambio con una familia francesa en Château-Gontier durante 1 mes"
+      historia:
+        "Estuve de intercambio con una familia francesa en Francia durante 1 mes"
     },
     {
       nombre: "Español",
       nivel: "Nativo",
       historia: "Nací en España"
     }
-  ]
+  ];
 }
