@@ -19,9 +19,16 @@ export class GithubServiceService {
   private client_id ='042485680f05bd35872a';
   private client_secret='949fb5cb8fbe18c788f275fbb396481a576238d9';
 
+  httpOptions = {
+    headers: new HttpHeaders({
+      'client_id':  this.client_id,
+      'client_secret': this.client_secret
+    })
+  };
+
   getRepos (user : string)  : Observable<Repo[]>{
 
-    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos")
+    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos", this.httpOptions)
     .pipe(map(res => res));
 
   }

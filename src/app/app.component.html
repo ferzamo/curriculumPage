@@ -1,8 +1,8 @@
 <div class="main">
 
-  <mat-card class="persona">
+  <mat-card class="persona" >
 
-    <img class="foto" src="/assets/images/profile.jpg">
+    <img class="foto" src="/assets/images/profile.png">
 
     <div class="datosPersona">
 
@@ -24,7 +24,8 @@
 
   </mat-card>
 
-  <mat-card class="estudios">
+  <mat-card class="estudios" data-aos="fade-down" data-aos-offset="0" data-aos-delay="100" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Estudios</h1>
 
@@ -45,7 +46,8 @@
 
   </mat-card>
 
-  <mat-card class="experiencia">
+  <mat-card class="experiencia" data-aos="fade-down" data-aos-offset="-100" data-aos-delay="400" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Experiencia</h1>
 
@@ -63,7 +65,8 @@
 
   </mat-card>
 
-  <mat-card class="certificados">
+  <mat-card class="certificados" data-aos="fade-down" data-aos-offset="-400" data-aos-delay="700" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
     <h1>Certificados</h1>
 
     <mat-list>
@@ -79,7 +82,8 @@
 
   </mat-card>
 
-  <mat-card class="habilidades">
+  <mat-card class="habilidades" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Habilidades</h1>
 
@@ -89,7 +93,8 @@
 
   </mat-card>
 
-  <mat-card class="idiomas">
+  <mat-card class="idiomas" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <h1>Idiomas</h1>
 
@@ -108,7 +113,8 @@
 
   </mat-card>
 
-  <mat-card class="github">
+  <mat-card class="github" data-aos="fade-down" data-aos-offset="-300" data-aos-delay="100" data-aos-duration="1000"
+  data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
 
     <div class="cabeceraGithub">
 
@@ -120,21 +126,24 @@
     <div class="cuerpoGithub">
 
       <div class="smallerBoxContainer" *ngFor="let repo of repos">
-        <a href={{repo.html_url}}><div class="smaller-box mat-elevation-z4">
+        <a href={{repo.html_url}}>
+          <div class="smaller-box mat-elevation-z4">
 
-          <p mat-line>
-            <font color="2c40b7" size="3px"><b>{{repo.name}}</b></font>
-          </p>
-          <p mat-line>
-            <span class="dot" [ngStyle]="{'background-color': repo.color}"></span>
-            <font size="2px"><i> {{repo.language}}</i></font>
-          </p>
+            <p mat-line>
+              <font color="2c40b7" size="3px"><b>{{repo.name}}</b></font>
+            </p>
+            <p mat-line>
+              <span class="dot" [ngStyle]="{'background-color': repo.color}"></span>
+              <font size="2px"><i> {{repo.language}}</i></font>
+            </p>
 
-        </div></a>
+          </div>
+        </a>
       </div>
 
     </div>
 
   </mat-card>
+
 
 </div>
