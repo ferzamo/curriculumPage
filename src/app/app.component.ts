@@ -1,7 +1,8 @@
 import { GithubServiceService } from "./services/github-service.service";
-import { Component } from "@angular/core";
+import { Component} from "@angular/core";
 import { Repo } from "./models/repo";
 import colors from "./../assets/jsons/colors.json";
+
 
 @Component({
   selector: "app-root",
@@ -21,8 +22,8 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-    this.cargaGithub();
-    //this.cargaGithubMock();
+    //this.cargaGithub();
+    this.cargaGithubMock();
 
     const numeroAleatorio = Math.floor((Math.random() * 21));
 
