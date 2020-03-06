@@ -13,10 +13,23 @@ export class AppComponent {
 
   repos: Repo[] = [];
 
+  animation : string;
+
+  aos = ["fade-up", "fade-down", "fade-right", "fade-left", "fade-up-right", "fade-up-left", "fade-down-right", "fade-down-left",
+         "flip-left", "flip-right", "flip-up", "flip-down", "zoom-in", "zoom-in-up", "zoom-in-down", "zoom-in-left", "zoom-in-right",
+         "zoom-out", "zoom-out-up", "zoom-out-down", "zoom-out-right", "zoom-out-left"]
+
   ngOnInit(): void {
 
     this.cargaGithub();
     //this.cargaGithubMock();
+
+    const numeroAleatorio = Math.floor((Math.random() * 21));
+
+    this.animation = this.aos[numeroAleatorio];
+
+    console.log(numeroAleatorio);
+
 
   }
 
