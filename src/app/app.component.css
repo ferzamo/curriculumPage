@@ -11,6 +11,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
 }
 
 @media (min-width: 150px) {
@@ -188,8 +189,10 @@
 .tarjeta{
   background-color: rgba(255, 255, 255, 0);
   
-  box-shadow: 0 0 0 0;
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08);
+
 }
+
 
 h1{
   color: rgb(207, 154, 40);
@@ -242,7 +245,7 @@ a {
   padding-top: 10px;
   padding-bottom: 0px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100px;
   width: auto;
 
@@ -251,6 +254,8 @@ a {
 
 .smaller-box:hover{
   transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.06);
+
 }
 
 .dot{
