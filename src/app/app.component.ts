@@ -139,20 +139,15 @@ export class AppComponent {
   idiomas = [
     {
       nombre: "Inglés",
-      nivel: "Avanzado",
-      historia:
-        "Estuve un mes en un campus de idiomas en Inglaterra y fui dos veranos a una familia de intercambio en Wisconsin"
+      nivel: "Avanzado"
     },
     {
       nombre: "Francés",
-      nivel: "Básico",
-      historia:
-        "Estuve de intercambio con una familia francesa en Francia durante 1 mes"
+      nivel: "Básico"
     },
     {
       nombre: "Español",
-      nivel: "Nativo",
-      historia: "Nací en España"
+      nivel: "Nativo"
     }
   ];
 }
