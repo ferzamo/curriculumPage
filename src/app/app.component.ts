@@ -22,8 +22,8 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-    //this.cargaGithub();
-    this.cargaGithubMock();
+    this.cargaGithub();
+    //this.cargaGithubMock();
 
     const numeroAleatorio = Math.floor((Math.random() * 21));
 
