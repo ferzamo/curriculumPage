@@ -61,6 +61,7 @@ export class AppComponent {
   githubURL = data.githubURL;
   githubUser = data.githubUser;
   github: string = this.githubURL + this.githubUser;
+  copyright = data.copyright;
   estudios = data.estudios;
   experiencias = data.experiencias;
   certificados = data.certificados;

@@ -7,6 +7,7 @@
   "correo": "fernandozd.contacto@gmail.com",
   "githubURL": "https://github.com/",
   "githubUser": "ferzamo",
+  "copyright": "Fernando Zamora Díez ©",
   "estudios": [{
       "nombre": "Grado en Ingeniería Informática",
       "centro": "Universidad de Valladolid",
@@ -104,9 +105,9 @@
     },
     {
       "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
+      "name": "mock1",
+      "language": "Typescript",
+      "color": "C++"
     },
     {
       "html_url": "",
@@ -116,31 +117,7 @@
     },
     {
       "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
-    },
-    {
-      "html_url": "",
       "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock2",
       "language": "Java",
       "color": "Java"
     }
