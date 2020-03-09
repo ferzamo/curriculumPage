@@ -1,23 +1,23 @@
 .background {
-  background-image: url(/assets/images/fondo.jpg);
+  background-image: url(/assets/images/fondoDes.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  animation: blurry 4s;
+  animation: blurry 2s;
 }
 
 @keyframes blurry {
   0% {
-    background-image: url(/assets/images/fondoDes.jpg);
+    background-image: url(/assets/images/fondo.jpg);
   }
-  15%{
-    background-image: url(/assets/images/fondoDes.jpg);
+  60%{
+    background-image: url(/assets/images/fondo.jpg);
   }
 
   100% {
-    background-image: url(/assets/images/fondo.jpg);
+    background-image: url(/assets/images/fondoDes.jpg);
   }
 }
 
