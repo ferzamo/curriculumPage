@@ -1,8 +1,8 @@
 import { GithubServiceService } from "./services/github-service.service";
-import { Component} from "@angular/core";
+import { Component } from "@angular/core";
 import { Repo } from "./models/repo";
 import colors from "./../assets/jsons/colors.json";
-
+import data from "./../assets/jsons/projectConfig.json";
 
 @Component({
   selector: "app-root",
@@ -14,24 +14,15 @@ export class AppComponent {
 
   repos: Repo[] = [];
 
-  animation : string;
+  animation: string;
 
-  aos = ["fade-up", "fade-down", "fade-right", "fade-left", "fade-up-right", "fade-up-left", "fade-down-right", "fade-down-left",
-         "flip-left", "flip-right", "flip-up", "flip-down", "zoom-in", "zoom-in-up", "zoom-in-down", "zoom-in-left", "zoom-in-right",
-         "zoom-out", "zoom-out-up", "zoom-out-down", "zoom-out-right", "zoom-out-left"]
+  aos = data.animaciones;
 
   ngOnInit(): void {
-
-    this.cargaGithub();
-    //this.cargaGithubMock();
-
-    const numeroAleatorio = Math.floor((Math.random() * 21));
-
+    //this.cargaGithub();
+    this.cargaGithubMock();
+    const numeroAleatorio = Math.floor(Math.random() * 21);
     this.animation = this.aos[numeroAleatorio];
-
-    console.log(numeroAleatorio);
-
-
   }
 
   cargaGithub() {
@@ -47,18 +38,7 @@ export class AppComponent {
   }
 
   cargaGithubMock() {
-    this.repos[0] = {
-      html_url: " ",
-      name: "curriculum",
-      language: "Typescript",
-      color: ""
-    };
-    this.repos[1] = {
-      html_url: " ",
-      name: "angularrr",
-      language: "JavaScript",
-      color: "aaa"
-    };
+    this.repos = data.mockGithub;
     this.parseaColors();
   }
 
@@ -72,82 +52,19 @@ export class AppComponent {
     }
   }
 
-  nombre: string = "Fernando";
-  apellido1: string = "Zamora";
-  apellido2: string = "Díez";
-  telefono: string = "644368456";
-  correo: string = "fernandozd.contacto@gmail.com";
-  githubURL: string = "https://github.com/";
-  githubUser: string = "ferzamo";
+  fotoUser = data.fotoUser;
+  nombre = data.nombre;
+  apellido1 = data.apellido1;
+  apellido2 = data.apellido2;
+  telefono = data.telefono;
+  correo = data.correo;
+  githubURL = data.githubURL;
+  githubUser = data.githubUser;
   github: string = this.githubURL + this.githubUser;
+  estudios = data.estudios;
+  experiencias = data.experiencias;
+  certificados = data.certificados;
+  habilidades = data.habilidades;
+  idiomas = data.idiomas;
 
-  estudios = [
-    {
-      nombre: "Grado en Ingeniería Informática",
-      centro: "Universidad de Valladolid",
-      lugar: "Valladolid",
-      anoInicio: "2015",
-      anoFin: "2020"
-    },
-    {
-      nombre: "Grado Elemental de Música en la Especialidad de Piano",
-      centro: "Centro de estudios musicales Modulando",
-      lugar: "Valladolid",
-      anoInicio: "2006",
-      anoFin: "2010"
-    }
-  ];
-
-  experiencias = [
-    {
-      nombre: "Becario en Minsait",
-      empresa: "Minsait",
-      anoInicio: "2020",
-      anoFin: "actualidad"
-    }
-  ];
-
-  certificados = [
-    {
-      nombre: "First (FCE) – CEFR level",
-      empresa: "Cambridge Assessment English",
-      fecha: "2018"
-    },
-    {
-      nombre: "Delf B1",
-      empresa: "Centre international d'études pédagogiques (CIEP)",
-      fecha: "2015"
-    },
-    {
-      nombre: "Grado Elemental de Música en la Especialidad de Piano",
-      empresa: "Centro de estudios Musicales Modulando",
-      fecha: "2010"
-    }
-  ];
-
-  habilidades = [
-    "Java",
-    "Python",
-    "SQL",
-    "JavaScript",
-    "Angular 2+",
-    "Android",
-    "UML",
-    "Ensamblador"
-  ];
-
-  idiomas = [
-    {
-      nombre: "Inglés",
-      nivel: "Avanzado"
-    },
-    {
-      nombre: "Francés",
-      nivel: "Básico"
-    },
-    {
-      nombre: "Español",
-      nivel: "Nativo"
-    }
-  ];
 }
