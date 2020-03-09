@@ -114,12 +114,6 @@
       "name": "mock1",
       "language": "Typescript",
       "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Java",
-      "color": "Java"
     }
   ]
 }
