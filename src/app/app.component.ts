@@ -19,8 +19,8 @@ export class AppComponent {
   aos = data.animaciones;
 
   ngOnInit(): void {
-    this.cargaGithub();
-    //this.cargaGithubMock();
+    //this.cargaGithub();
+    this.cargaGithubMock();
     const numeroAleatorio = Math.floor(Math.random() * 21);
     this.animation = this.aos[numeroAleatorio];
   }

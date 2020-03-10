@@ -41,11 +41,12 @@
       "idiomas"
       "github"
       "."
+      "contacto"
       "footer";
 
     grid-template-columns: 100%;
 
-    grid-template-rows: 3vh auto auto auto auto auto auto auto 5vh 3vh;
+    grid-template-rows: 3vh auto auto auto auto auto auto auto 5vh 6vh 3vh;
   }
 }
 
@@ -60,11 +61,12 @@
       ". habilidades idiomas ."
       ". github github ."
       ". . . ."
+      ". contacto contacto ."
       ". footer footer .";
 
     grid-template-columns: 20% 30% 30% 20%;
 
-    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 3vh;
+    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 6vh 3vh;
   }
 }
 
@@ -79,11 +81,12 @@
       ". habilidades idiomas ."
       ". github github ."
       ". . . ."
+      ". contacto contacto ."
       ". footer footer .";
 
     grid-template-columns: 30% 20% 20% 30%;
 
-    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 3vh;
+    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 6vh 3vh;
   }
 }
 
@@ -148,6 +151,8 @@
   grid-area: idiomas;
 }
 
+
+
 /* ---------- Github ---------- */
 
 .github {
@@ -157,6 +162,7 @@
 .cuerpoGithub {
   display: flex;
   flex-direction: column;
+
 }
 
 /* ---------- Github ---------- */
@@ -164,6 +170,19 @@
   grid-area: footer;
   display: flex;
   justify-content: center;
+}
+
+/* ---------- Contacto ---------- */
+
+.contacto {
+  grid-area: contacto;
+  display: flex;
+  justify-content: center;
+
+}
+
+.contacto svg {
+  margin: 4px;
 }
 
 /* ---------- Componentes ---------- */
