@@ -45,6 +45,7 @@ export class AppComponent {
   parseaColors() {
     for (let i in colors) {
       for (let j = 0; j < this.repos.length; j++) {
+        if(this.repos[j].language)
         if (i.toUpperCase() === this.repos[j].language.toUpperCase()) {
           this.repos[j].color = colors[i].color;
         }
@@ -67,5 +68,10 @@ export class AppComponent {
   certificados = data.certificados;
   habilidades = data.habilidades;
   idiomas = data.idiomas;
+  contactoLinkedin = data.contactoLinkedin;
+  contactoGithub= data.contactoGithub;
+  contactoFacebook = data.contactoFacebook;
+  contactoInstagram = data.contactoInstagram;
+
 
 }

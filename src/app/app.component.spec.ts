@@ -1,12 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { GithubServiceService } from "./services/github-service.service";
 
 describe('AppComponent', () => {
+
+  let githubService: GithubServiceService;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
+      ],
+      providers: [
+        GithubServiceService
       ],
       declarations: [
         AppComponent
@@ -14,22 +21,18 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
+  beforeEach(() => {
+    githubService = TestBed.get(GithubServiceService);
+  });
+
   it('should create the app', () => {
+    spyOn(githubService, 'getRepos').and.returnValue(undefined);
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'PaginaPersonal'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('PaginaPersonal');
-  });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('PaginaPersonal app is running!');
-  });
+
+
 });

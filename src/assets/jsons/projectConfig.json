@@ -8,7 +8,8 @@
   "githubURL": "https://github.com/",
   "githubUser": "ferzamo",
   "copyright": "Fernando Zamora Díez ©",
-  "estudios": [{
+  "estudios": [
+    {
       "nombre": "Grado en Ingeniería Informática",
       "centro": "Universidad de Valladolid",
       "lugar": "Valladolid",
@@ -23,13 +24,16 @@
       "anoFin": "2010"
     }
   ],
-  "experiencias": [{
-    "nombre": "Becario en Minsait",
-    "empresa": "Minsait",
-    "anoInicio": "2020",
-    "anoFin": "actualidad"
-  }],
-  "certificados": [{
+  "experiencias": [
+    {
+      "nombre": "Becario en Minsait",
+      "empresa": "Minsait",
+      "anoInicio": "2020",
+      "anoFin": "actualidad"
+    }
+  ],
+  "certificados": [
+    {
       "nombre": "First (FCE) – CEFR level",
       "empresa": "Cambridge Assessment English",
       "fecha": "2018"
@@ -55,7 +59,8 @@
     "UML",
     "Ensamblador"
   ],
-  "idiomas": [{
+  "idiomas": [
+    {
       "nombre": "Inglés",
       "nivel": "Avanzado"
     },
@@ -69,11 +74,35 @@
     }
   ],
   "animaciones": [
-    "fade-up", "fade-down", "fade-right", "fade-left", "fade-up-right", "fade-up-left", "fade-down-right", "fade-down-left",
-    "flip-left", "flip-right", "flip-up", "flip-down", "zoom-in", "zoom-in-up", "zoom-in-down", "zoom-in-left", "zoom-in-right",
-    "zoom-out", "zoom-out-up", "zoom-out-down", "zoom-out-right", "zoom-out-left"
+    "fade-up",
+    "fade-down",
+    "fade-right",
+    "fade-left",
+    "fade-up-right",
+    "fade-up-left",
+    "fade-down-right",
+    "fade-down-left",
+    "flip-left",
+    "flip-right",
+    "flip-up",
+    "flip-down",
+    "zoom-in",
+    "zoom-in-up",
+    "zoom-in-down",
+    "zoom-in-left",
+    "zoom-in-right",
+    "zoom-out",
+    "zoom-out-up",
+    "zoom-out-down",
+    "zoom-out-right",
+    "zoom-out-left"
   ],
-  "mockGithub": [{
+  "contactoLinkedin": "https://www.linkedin.com/in/fernandozamoradiez/",
+  "contactoGithub": "https://github.com/ferzamo",
+  "contactoFacebook": "https://www.facebook.com/fernando.zamora.754703",
+  "contactoInstagram": "https://www.instagram.com/fernandozd19/",
+  "mockGithub": [
+    {
       "html_url": "",
       "name": "mock1",
       "language": "Typescript",
@@ -84,6 +113,30 @@
       "name": "mock2",
       "language": "Java",
       "color": "Java"
+    },
+    {
+      "html_url": "",
+      "name": "mock1",
+      "language": "Typescript",
+      "color": "C++"
+    },
+    {
+      "html_url": "",
+      "name": "mock2",
+      "language": "Java",
+      "color": "Java"
+    },
+    {
+      "html_url": "",
+      "name": "mock1",
+      "language": "Typescript",
+      "color": "C++"
+    },
+    {
+      "html_url": "",
+      "name": "mock1",
+      "language": "Typescript",
+      "color": "C++"
     },
     {
       "html_url": "",
