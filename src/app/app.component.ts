@@ -4,6 +4,7 @@ import { Repo } from "./models/repo";
 import colors from "./../assets/jsons/colors.json";
 import data from "./../assets/jsons/projectConfig.json";
 
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -14,13 +15,13 @@ export class AppComponent {
 
   repos: Repo[] = [];
 
-  animation: string;
+  animation: string = null;
 
   aos = data.animaciones;
 
   ngOnInit(): void {
-    this.cargaGithub();
-    //this.cargaGithubMock();
+    //this.cargaGithub();
+    this.cargaGithubMock();
     const numeroAleatorio = Math.floor(Math.random() * 21);
     this.animation = this.aos[numeroAleatorio];
   }
@@ -68,6 +69,8 @@ export class AppComponent {
   certificados = data.certificados;
   habilidades = data.habilidades;
   idiomas = data.idiomas;
+  todoList = data.todo;
+  anoActual = new Date().getFullYear();
   contactoLinkedin = data.contactoLinkedin;
   contactoGithub= data.contactoGithub;
   contactoFacebook = data.contactoFacebook;

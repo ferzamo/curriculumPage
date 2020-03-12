@@ -40,6 +40,7 @@
       "habilidades"
       "idiomas"
       "github"
+      "todo"
       "."
       "contacto"
       "footer";
@@ -60,13 +61,14 @@
       ". certificados certificados ."
       ". habilidades idiomas ."
       ". github github ."
+      ". todo todo ."
       ". . . ."
       ". contacto contacto ."
       ". footer footer .";
 
     grid-template-columns: 20% 30% 30% 20%;
 
-    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 6vh 3vh;
+    grid-template-rows: 5vh auto auto auto auto auto auto auto 15vh 6vh 3vh;
   }
 }
 
@@ -80,13 +82,14 @@
       ". certificados certificados ."
       ". habilidades idiomas ."
       ". github github ."
+      ". todo todo ."
       ". . . ."
       ". contacto contacto ."
       ". footer footer .";
 
     grid-template-columns: 30% 20% 20% 30%;
 
-    grid-template-rows: 5vh auto auto auto auto auto auto 15vh 6vh 3vh;
+    grid-template-rows: 5vh auto auto auto auto auto auto auto 15vh 6vh 3vh;
   }
 }
 
@@ -166,7 +169,13 @@
 
 }
 
-/* ---------- Github ---------- */
+/* ---------- To do ---------- */
+
+.todo {
+  grid-area: todo;
+}
+
+/* ---------- Footer ---------- */
 .footer {
   grid-area: footer;
   display: flex;
@@ -276,4 +285,10 @@ a {
 .hvr-shadow:focus,
 .hvr-shadow:active {
   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tachado{
+  color: rgb(236, 165, 11);
+  text-decoration: line-through;
+
 }

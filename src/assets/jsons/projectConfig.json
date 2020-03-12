@@ -1,5 +1,5 @@
 {
-  "fotoUser": "/assets/images/profile.jpg",
+  "fotoUser": "/assets/images/profile.png",
   "nombre": "Fernando",
   "apellido1": "Zamora",
   "apellido2": "Díez",
@@ -73,6 +73,24 @@
       "nivel": "Nativo"
     }
   ],
+  "todo": [
+    {
+      "nombre": "Texto de ejemplo 1",
+      "done": false
+    },
+    {
+      "nombre": "Texto de ejemplo 1",
+      "done": true
+    },
+    {
+      "nombre": "Texto de ejemplo 1",
+      "done": false
+    }
+  ],
+  "contactoLinkedin": "https://www.linkedin.com/in/fernandozamoradiez/",
+  "contactoGithub": "https://github.com/ferzamo",
+  "contactoFacebook": "https://www.facebook.com/fernando.zamora.754703",
+  "contactoInstagram": "https://www.instagram.com/fernandozd19/",
   "animaciones": [
     "fade-up",
     "fade-down",
@@ -97,10 +115,6 @@
     "zoom-out-right",
     "zoom-out-left"
   ],
-  "contactoLinkedin": "https://www.linkedin.com/in/fernandozamoradiez/",
-  "contactoGithub": "https://github.com/ferzamo",
-  "contactoFacebook": "https://www.facebook.com/fernando.zamora.754703",
-  "contactoInstagram": "https://www.instagram.com/fernandozd19/",
   "mockGithub": [
     {
       "html_url": "",
@@ -113,54 +127,6 @@
       "name": "mock2",
       "language": "Java",
       "color": "Java"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
     },
     {
       "html_url": "",
