@@ -75,52 +75,37 @@
   ],
   "todo": [
     {
-      "nombre": "Texto de ejemplo 1",
+      "nombre": "JavaScript",
       "done": false
     },
     {
-      "nombre": "Texto de ejemplo 2",
+      "nombre": "Angular 2+",
       "done": true
     },
     {
-      "nombre": "Texto de ejemplo 3",
+      "nombre": "TypeScript",
+      "done": true
+    },
+    {
+      "nombre": "Android",
+      "done": true
+    },
+    {
+      "nombre": "TensorFlow",
       "done": false
     },
     {
-      "nombre": "Texto de ejemplo 4",
-      "done": true
+      "nombre": "Advanced Python",
+      "done": false
     },
     {
-      "nombre": "Texto de ejemplo 5",
-      "done": true
+      "nombre": "MPEG-DASH knowledge",
+      "done": false
     }
+
   ],
   "contactoLinkedin": "https://www.linkedin.com/in/fernandozamoradiez/",
   "contactoGithub": "https://github.com/ferzamo",
   "contactoFacebook": "https://www.facebook.com/fernando.zamora.754703",
-  "contactoInstagram": "https://www.instagram.com/fernandozd19/",
-  "animaciones": [
-    "fade-up",
-    "fade-down",
-    "fade-right",
-    "fade-left",
-    "fade-up-right",
-    "fade-up-left",
-    "fade-down-right",
-    "fade-down-left",
-    "flip-left",
-    "flip-right",
-    "flip-up",
-    "flip-down",
-    "zoom-in",
-    "zoom-in-up",
-    "zoom-in-down",
-    "zoom-in-left",
-    "zoom-in-right",
-    "zoom-out",
-    "zoom-out-up",
-    "zoom-out-down",
-    "zoom-out-right",
-    "zoom-out-left"
-  ]
+  "contactoInstagram": "https://www.instagram.com/fernandozd19/"
 }

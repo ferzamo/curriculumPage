@@ -18,13 +18,12 @@ export class AppComponent {
 
   animation: string = null;
 
-  aos = data.animaciones;
+  
 
   ngOnInit(): void {
     this.cargaGithub();
     //this.cargaGithubMock();
-    const numeroAleatorio = Math.floor(Math.random() * 21);
-    this.animation = this.aos[numeroAleatorio];
+    
   }
 
   cargaGithub() {
