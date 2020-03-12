@@ -8,7 +8,7 @@ import data from "./../assets/jsons/projectConfig.json";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.less"]
 })
 export class AppComponent {
 
@@ -42,8 +42,17 @@ export class AppComponent {
   }
 
   cargaGithubMock() {
-    this.repos = data.mockGithub;
-    this.parseaColors();
+    this.loadingService.torn();
+    this.githubService.getReposMock(this.githubUser).subscribe(
+      res => {
+        this.repos = res;
+        this.parseaColors();
+        this.loadingService.torn();
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
   parseaColors() {

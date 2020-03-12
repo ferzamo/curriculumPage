@@ -1,5 +1,5 @@
 {
-  "fotoUser": "/assets/images/profile.png",
+  "fotoUser": "/assets/images/profile.jpg",
   "nombre": "Fernando",
   "apellido1": "Zamora",
   "apellido2": "Díez",
@@ -122,25 +122,5 @@
     "zoom-out-down",
     "zoom-out-right",
     "zoom-out-left"
-  ],
-  "mockGithub": [
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    },
-    {
-      "html_url": "",
-      "name": "mock2",
-      "language": "Java",
-      "color": "Java"
-    },
-    {
-      "html_url": "",
-      "name": "mock1",
-      "language": "Typescript",
-      "color": "C++"
-    }
   ]
 }

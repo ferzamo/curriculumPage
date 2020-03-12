@@ -1,4 +1,16 @@
 
+@PRIMARY-COLOR: rgb(236, 165, 11);
+@BIG-GRID: ". . . . "
+". persona persona ."
+". estudios estudios ."
+". experiencia experiencia ."
+". certificados certificados ."
+". habilidades idiomas ."
+". github github ."
+". todo todo ."
+". . . ."
+". contacto contacto ."
+". footer footer .";
 
 .background {
   background-image: url(/assets/images/fondoDes.jpg);
@@ -55,18 +67,7 @@
 
 @media (min-width: 600px) {
   .main {
-    grid-template-areas:
-      ". . . . "
-      ". persona persona ."
-      ". estudios estudios ."
-      ". experiencia experiencia ."
-      ". certificados certificados ."
-      ". habilidades idiomas ."
-      ". github github ."
-      ". todo todo ."
-      ". . . ."
-      ". contacto contacto ."
-      ". footer footer .";
+    grid-template-areas: @BIG-GRID;
 
     grid-template-columns: 20% 30% 30% 20%;
 
@@ -76,18 +77,7 @@
 
 @media (min-width: 1500px) {
   .main {
-    grid-template-areas:
-      ". . . ."
-      ". persona persona ."
-      ". estudios estudios ."
-      ". experiencia experiencia ."
-      ". certificados certificados ."
-      ". habilidades idiomas ."
-      ". github github ."
-      ". todo todo ."
-      ". . . ."
-      ". contacto contacto ."
-      ". footer footer .";
+    grid-template-areas: @BIG-GRID;
 
     grid-template-columns: 30% 20% 20% 30%;
 
@@ -206,12 +196,12 @@
 }
 
 h1 {
-  color: rgb(236, 165, 11);
+  color: @PRIMARY-COLOR;
   font-size: 25px;
 }
 
 .nombre {
-  color: rgb(236, 165, 11);
+  color: @PRIMARY-COLOR;
   font-size: 25px;
 }
 

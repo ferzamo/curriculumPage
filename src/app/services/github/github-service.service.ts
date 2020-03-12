@@ -18,9 +18,18 @@ export class GithubServiceService {
 
   getRepos (user : string)  : Observable<Repo[]>{
 
-    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos").pipe(delay(1000))
+    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos").pipe(delay(1400))
     .pipe(map(res => res));
 
   }
+
+  getReposMock (user : string)  : Observable<Repo[]>{
+
+    return this.http.get<Repo[]>("http://www.mocky.io/v2/5e6a23102d000093005fa104").pipe(delay(1400))
+    .pipe(map(res => res));
+
+  }
+
+
 
 }
