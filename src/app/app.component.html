@@ -1,4 +1,5 @@
 <div class="background">
+  <app-loading-component></app-loading-component>
   <div class="main">
     <!----------PERSONA---------->
     <mat-card
@@ -157,8 +158,8 @@
       data-aos-once="true"
       data-aos-anchor-placement="top-center"
     >
-      <h1>Github</h1>
 
+      <h1>Github</h1>
       <div class="cuerpoGithub">
         <div class="smallerBoxContainer" *ngFor="let repo of repos">
           <a href="{{ repo.html_url }}">
@@ -199,8 +200,7 @@
         <mat-list-item
           *ngFor="let todo of todoList"
         >
-          <p mat-line [ngClass]="todo.done == false ? 'tachado' : null"><span>{{ todo.nombre }}</span></p>
-
+          <p mat-line [ngClass]="todo.done == true ? 'todoDone' : null"><span>{{ todo.nombre }}</span></p>
         </mat-list-item>
       </mat-list>
 

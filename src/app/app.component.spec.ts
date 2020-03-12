@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { GithubServiceService } from "./services/github-service.service";
+import { GithubServiceService } from "./services/github/github-service.service";
 import {HttpClientTestingModule} from '@angular/common/http/testing'
 import { MatCardModule } from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';

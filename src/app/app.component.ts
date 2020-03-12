@@ -1,9 +1,9 @@
-import { GithubServiceService } from "./services/github-service.service";
+import { GithubServiceService } from "./services/github/github-service.service";
+import { LoadingServiceService} from "./services/loading/loading-service.service";
 import { Component } from "@angular/core";
 import { Repo } from "./models/repo";
 import colors from "./../assets/jsons/colors.json";
 import data from "./../assets/jsons/projectConfig.json";
-
 
 @Component({
   selector: "app-root",
@@ -11,7 +11,8 @@ import data from "./../assets/jsons/projectConfig.json";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private githubService: GithubServiceService) {}
+
+  constructor(private githubService: GithubServiceService, private loadingService: LoadingServiceService) {}
 
   repos: Repo[] = [];
 
@@ -27,10 +28,12 @@ export class AppComponent {
   }
 
   cargaGithub() {
+    this.loadingService.torn();
     this.githubService.getRepos(this.githubUser).subscribe(
       res => {
         this.repos = res;
         this.parseaColors();
+        this.loadingService.torn();
       },
       error => {
         console.log(error);
@@ -46,10 +49,10 @@ export class AppComponent {
   parseaColors() {
     for (let i in colors) {
       for (let j = 0; j < this.repos.length; j++) {
-        if(this.repos[j].language)
-        if (i.toUpperCase() === this.repos[j].language.toUpperCase()) {
-          this.repos[j].color = colors[i].color;
-        }
+        if (this.repos[j].language)
+          if (i.toUpperCase() === this.repos[j].language.toUpperCase()) {
+            this.repos[j].color = colors[i].color;
+          }
       }
     }
   }
@@ -69,12 +72,10 @@ export class AppComponent {
   certificados = data.certificados;
   habilidades = data.habilidades;
   idiomas = data.idiomas;
-  todoList = data.todo;
+  todoList = data.todo.sort((a, b) => a.done - b.done);
   anoActual = new Date().getFullYear();
   contactoLinkedin = data.contactoLinkedin;
-  contactoGithub= data.contactoGithub;
+  contactoGithub = data.contactoGithub;
   contactoFacebook = data.contactoFacebook;
   contactoInstagram = data.contactoInstagram;
-
-
 }

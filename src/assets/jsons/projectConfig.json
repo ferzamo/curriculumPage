@@ -79,12 +79,20 @@
       "done": false
     },
     {
-      "nombre": "Texto de ejemplo 1",
+      "nombre": "Texto de ejemplo 2",
       "done": true
     },
     {
-      "nombre": "Texto de ejemplo 1",
+      "nombre": "Texto de ejemplo 3",
       "done": false
+    },
+    {
+      "nombre": "Texto de ejemplo 4",
+      "done": true
+    },
+    {
+      "nombre": "Texto de ejemplo 5",
+      "done": true
     }
   ],
   "contactoLinkedin": "https://www.linkedin.com/in/fernandozamoradiez/",

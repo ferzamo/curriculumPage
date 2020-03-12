@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpResponse, HttpHeaders} from '@angular/common/http'
 import {Observable} from 'rxjs'
-import {Repo} from './../models/repo';
-import {map} from 'rxjs/operators';
+import {Repo} from '../../models/repo';
+import {map, delay} from 'rxjs/operators';
 
 
 
@@ -18,7 +18,7 @@ export class GithubServiceService {
 
   getRepos (user : string)  : Observable<Repo[]>{
 
-    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos")
+    return this.http.get<Repo[]>(this.url + "/users/" + user + "/repos").pipe(delay(1000))
     .pipe(map(res => res));
 
   }
