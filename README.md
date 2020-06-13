@@ -1,6 +1,6 @@
 # PaginaPersonal
 
-http://curriculumfernando.azurewebsites.net/
+https://curriculumferzamo.herokuapp.com/
 
 ## Development server
 
