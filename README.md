@@ -1,6 +1,6 @@
 # PaginaPersonal
 
-https://curriculumferzamo.herokuapp.com/
+https://curriculumfernando.com
 
 ## Development server
 
