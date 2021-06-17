@@ -80,7 +80,7 @@ export class AppComponent {
   certificados = data.certificados;
   habilidades = data.habilidades;
   idiomas = data.idiomas;
-  todoList = data.todo.sort((a, b) => a.done - b.done);
+  frontList = data.front.sort((a, b) => a.done - b.done);
   anoActual = new Date().getFullYear();
   contactoLinkedin = data.contactoLinkedin;
   contactoGithub = data.contactoGithub;

@@ -4,10 +4,10 @@
 ". persona persona ."
 ". estudios estudios ."
 ". experiencia experiencia ."
+". front front ."
 ". certificados certificados ."
 ". habilidades idiomas ."
 ". github github ."
-". todo todo ."
 ". . . ."
 ". contacto contacto ."
 ". footer footer .";
@@ -50,11 +50,11 @@
       "persona"
       "estudios"
       "experiencia"
+      "front"
       "certificados"
       "habilidades"
       "idiomas"
       "github"
-      "todo"
       "."
       "contacto"
       "footer";
@@ -163,8 +163,8 @@
 
 /* ---------- To do ---------- */
 
-.todo {
-  grid-area: todo;
+.front {
+  grid-area: front;
 }
 
 /* ---------- Footer ---------- */
@@ -221,6 +221,10 @@ mat-tab {
   color: white;
 }
 
+.mat-line {
+  white-space: normal !important;
+}
+
 a {
   text-decoration: none !important;
   color: rgba(0, 0, 0, 0.918);
@@ -260,14 +264,14 @@ a {
   display: inline-block;
 }
 
-.todoDone{
+.frontDone{
 
   color: rgba(255, 255, 255, 0.144);
 
 
 }
 
-.todoDotBlack{
+.frontDotBlack{
   height: 8px;
   width: 8px;
   border-radius: 50%;
@@ -275,7 +279,7 @@ a {
   background-color: black;
 }
 
-.todoDotGrey{
+.frontDotGrey{
   height: 8px;
   width: 8px;
   border-radius: 50%;
@@ -283,13 +287,16 @@ a {
   background-color: rgba(0, 0, 0, 0.418);
 }
 
-.todoText {
+.frontText {
   margin-left: 10px;
 }
 
 /* ---------- Hover.css ---------- */
 
 .hvr-shadow {
+  height: fit-content !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);

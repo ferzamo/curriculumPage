@@ -51,6 +51,20 @@
         </mat-list-item>
       </mat-list>
     </mat-card>
+    <!----------EPERIENCIA FRONT---------->
+    <mat-card class="front tarjeta" data-aos="zoom-in" data-aos-offset="-10000" data-aos-delay="1700"
+      data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true"
+      data-aos-anchor-placement="top-center">
+      <h1>Experiencia Front</h1>
+
+      <mat-list>
+        <mat-list-item *ngFor="let front of frontList" class="hvr-shadow">
+          <p mat-line>{{ front.titulo }}</p>
+          <p mat-line>{{ front.nombre }}</p>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-card>
     <!----------CERTIFICADOS---------->
     <mat-card class="certificados tarjeta" data-aos="zoom-in" data-aos-offset="-100000" data-aos-delay="1300"
       data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true"
@@ -108,19 +122,6 @@
           </a>
         </div>
       </div>
-    </mat-card>
-    <!----------TODO---------->
-    <mat-card class="todo tarjeta" data-aos="zoom-in" data-aos-offset="-10000" data-aos-delay="1700"
-      data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true"
-      data-aos-anchor-placement="top-center">
-      <h1>To do {{anoActual}}</h1>
-
-      <mat-list>
-        <mat-list-item *ngFor="let todo of todoList">
-          <p mat-line [ngClass]="todo.done == true ? 'todoDone' : null"><span [ngClass]="todo.done == true ? 'todoDotGrey' : 'todoDotBlack'"></span><span class="todoText">{{ todo.nombre }}</span></p>
-        </mat-list-item>
-      </mat-list>
-
     </mat-card>
     <!----------CONTACTO---------->
     <div class="contacto" data-aos="zoom-in" data-aos-offset="-10000" data-aos-delay="1800" data-aos-duration="1000"
