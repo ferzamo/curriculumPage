@@ -1,0 +1,7 @@
+<div class="point" *ngFor="let point of points">
+  <div class="point-dot"></div>
+  <p [ngClass]="double ? 'light-blue' : 'dark-grey'">
+    {{ point.title }}{{ point.text?.length ? ": " : "" }}
+    <span>{{ point.text }}</span>
+  </p>
+</div>
